@@ -1,0 +1,28 @@
+<?php 
+namespace Inc\Base;
+
+class FloatingBar{
+
+public function register()
+{
+add_action("admin_enque_script",array($this,'enque'));
+add_action("wp_enqueue_scripts",array($this,'enqueIscript'));
+}
+public function enque()
+{
+//echo'enqueing style';
+wp_enque_styles('mystyle',PLUGIN_URL.'/assets/floating_bar.css');
+}
+public function enqueIscript()
+{
+		 wp_register_script( "floating_bar", PLUGIN_URL.'/assets/floating_bar.js', array('jquery') );
+   
+   // localize the script to your domain name, so that you can reference the url to admin-ajax.php file easily
+   wp_localize_script( 'floating_bar', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));        
+   
+   // enqueue jQuery library and the script you registered above
+   wp_enqueue_script( 'jquery' );
+   wp_enqueue_script( 'floating_bar' );
+}
+}
+?>

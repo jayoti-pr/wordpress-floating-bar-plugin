@@ -1,0 +1,16 @@
+{
+    "name": "jayo/floating-bar",
+    "description": "wordpress floating bar",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "jay"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload":{
+	"psr-4":{"Inc\\":"./inc"}
+	}
+}

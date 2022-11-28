@@ -1,0 +1,43 @@
+.fixedbar {
+background: #000; 
+top: 0px; 
+color:#fff; 
+font-family: Arial, Helvetica, sans-serif; 
+left:0; 
+padding: 0px 0; 
+position:fixed; 
+font-size:16px; 
+width:100%; 
+z-index:99999; 
+float:left; 
+vertical-align:middle; 
+margin: 0px 0 0; 
+opacity: 0.95; 
+font-weight: bold;
+}
+.boxfloat {
+text-align:center; 
+width:920px; 
+margin:0 auto;
+}
+ 
+#tips, #tips li {
+margin:0; 
+padding:0; 
+list-style:none
+}
+#tips {
+width:920px; 
+font-size:20px; 
+line-height:120%;
+}
+#tips li {
+padding: 15px 0; 
+display:none;
+}
+#tips li a{
+color: #fff;
+}
+#tips li a:hover {
+text-decoration: none;
+}

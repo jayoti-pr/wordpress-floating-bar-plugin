@@ -1,11 +1,14 @@
 <?php 
+/*
+@package floating_bar
+*/
 namespace Inc\Base;
 
 class Enque{
 
 public function register()
 {
-add_action("admin_enque_script",array($this,'enque'));
+add_action("admin_enqueue_scripts",array($this,'enque'));
 add_action("wp_enqueue_scripts",array($this,'enqueIscript'));
 add_action("init",array($this,'registerSession'));
 add_action('wp_ajax_register_user_front_end',array($this,'register_user_front_end') );
@@ -24,8 +27,10 @@ public function registerSession()
         session_start();
     }
 }
-public function enque()
+public function enque($hook_suffix )
 {
+wp_enqueue_style( 'wp-color-picker' );
+wp_enqueue_script( 'admin_script', PLUGIN_URL.'assets/admin_script.js',  array( 'wp-color-picker' ), false, true  );
 }
 public function enqueIscript()
 {

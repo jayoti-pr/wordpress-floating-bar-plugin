@@ -1,11 +1,11 @@
 {
-    "name": "jayo/floating-bar",
+    "name": "jay/floating_bar",
     "description": "wordpress floating bar",
     "type": "project",
     "license": "GPL",
     "authors": [
         {
-            "name": "jay"
+            "name": "jayoti prakash"
         }
     ],
     "minimum-stability": "dev",

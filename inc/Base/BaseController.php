@@ -1,7 +1,6 @@
 <?php
 /*
-@package jp_reviews
-
+@package floating_bar
 */
 namespace Inc\Base;
 

@@ -1,6 +1,6 @@
 <?php
 /*
-@package jp_reviews
+@package floating_bar
 */
 namespace Inc\Base;
 use \Inc\Base\BaseController;
@@ -15,7 +15,7 @@ class SettingLinks extends BaseController
  public function setting_links($links)
  {
 echo'setting linkds';
-  $setting_link="<a href='/wp-admin/admin.php?page=jp_reviews_settings'>Settings</a>";
+  $setting_link="<a href='admin.php?page=floating_bar_settings'>Settings</a>";
   array_push($links,$setting_link);
   return $links;
  }

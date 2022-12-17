@@ -10,6 +10,7 @@ $floating_bar_options = get_option( 'floating_bar_option_name' );
 {
  return array(
   Pages\Admin::class,
+  Base\Enque::class,
   Base\SettingLinks::class
  
  );

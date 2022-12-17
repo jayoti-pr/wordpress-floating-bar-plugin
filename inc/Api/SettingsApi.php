@@ -150,7 +150,7 @@ class SettingsApi{
 	public function bar_background_0_callback() {
 		printf(
 			'<input class="regular-text bar-background" type="text" name="floating_bar_option_name[bar_background_0]" id="bar_background_0" value="%s">',
-			isset( $this->floating_bar_options['bar_background_0'] ) ? esc_attr( $this->floating_bar_options['bar_background_0']) : ''
+			isset( $this->floating_bar_options['bar_background_0'] ) ? esc_attr( $this->floating_bar_options['bar_background_0']) : '#bada55'
 		);
 	}
 	

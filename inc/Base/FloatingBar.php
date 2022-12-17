@@ -12,9 +12,15 @@ $this->floating_bar_options = get_option( 'floating_bar_option_name' );
 }
 public function register()
 {
-if(! isset($_SESSION['agree']))
+if(!isset($_SESSION['agree']))
+{ 
+if($this->floating_bar_options['position_1']=="top")
 add_action("wp_head",array($this,'prefix_footer_code'));
+else
+add_action("wp_footer",array($this,'prefix_footer_code'));
 }
+}
+
 public function prefix_footer_code()
 {
  ?>
@@ -42,13 +48,21 @@ public function prefix_footer_code()
  <script>
  jQuery(document).ready(function($){
         var bcolor="<?php echo $this->floating_bar_options['bar_background_0'];  ?>";
+		var position="<?php echo $this->floating_bar_options['position_1'];  ?>";
 		var adminBarHeight = 0;
 		if ( $("#wpadminbar").length != 0 ){
 			var adminBarHeight = $('#wpadminbar').height();
-		}
+		}		
 		var floating_bar_height = adminBarHeight + jQuery( '.floating_bar_fixed' ).outerHeight();
+		if(position=='top'){
 		jQuery( 'html' ).attr( 'style', 'margin-top: ' + floating_bar_height + 'px !important' );
-		jQuery( '.floating_bar_fixed' ).css("background-color", bcolor);
+		jQuery( '.floating_bar_fixed' ).css({   'top' : '0px',    'background-color' : bcolor});
+		}
+		else{
+		jQuery( 'html' ).attr( 'style', 'margin-bottom: ' + floating_bar_height + 'px !important' );
+		jQuery( '.floating_bar_fixed' ).css({   'bottom' : '0px',    'background-color' : bcolor});
+		}
+		//jQuery( '.floating_bar_fixed' ).css("background-color", bcolor);
 	  
 });		
 </script>

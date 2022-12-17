@@ -6,7 +6,7 @@
 	.floating_bar_fixed {
 		background-color: green;		
 		position: fixed;
-		top: 0;
+		/* top: 0; */
 		left: 0;
 		right: 0;
 		z-index: 9999999;

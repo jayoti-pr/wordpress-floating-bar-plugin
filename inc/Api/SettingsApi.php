@@ -89,7 +89,7 @@ class SettingsApi{
 		);
 		add_settings_field(
 			'bar_button_link', // id
-			'bar button link', // title
+			'select page to link', // title
 			array( $this, 'bar_button_link_callback' ), // callback
 			'floating-bar-admin', // page
 			'floating_bar_setting_section' // section

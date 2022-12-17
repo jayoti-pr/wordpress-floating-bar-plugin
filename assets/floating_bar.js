@@ -5,13 +5,14 @@ jQuery.ajax({
 	    //dataType: 'html',
 	   data: {
             action: "register_user_front_end",
-            //agree : 1,           
+            agree : 1,           
           },
 		
 	   success: function(results){            
           	jQuery('.ajax_click').closest(".floating_bar_fixed").hide('slow',function(){
 
-					jQuery('.ajax_click').closest(".floating_bar_fixed").remove()
+					jQuery('.ajax_click').closest(".floating_bar_fixed").remove();
+					jQuery( 'html' ).removeAttr("style");
 				});
 		 
 

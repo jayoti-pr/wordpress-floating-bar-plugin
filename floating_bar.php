@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: floatig bar
-  Plugin URI: https://akismet.com/
+  Plugin URI: https://github.com/jayoti-pr/wordpress-floating-bar-plugin
   Description: flaoting bar for wordpress
   Version: 1.0
   Author: Jayoti Prakash
@@ -11,8 +11,6 @@
 if (file_exists(dirname(__FILE__).'/vendor/autoload.php')){
 require_once dirname(__FILE__).'/vendor/autoload.php';
 }
-//use Inc\Base\Activate;
-//use Inc\Base\Deactivate;
 use Inc\Init;
 defined('ABSPATH')or die('cannot accessthis location');
 
